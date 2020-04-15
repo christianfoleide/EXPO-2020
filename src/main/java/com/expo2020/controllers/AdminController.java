@@ -34,7 +34,7 @@ public class AdminController {
 
     @RequestMapping(value = "/admin/hentqr", produces = "image/jpg")
     public @ResponseBody byte[] getImage(@ModelAttribute Stand stand) throws IOException, WriterException {
-        return QR.generateQrImage("http://127.0.0.1:8080/stem/" + stand.getNavn());
+        return QR.generateQrImage("http://data1.hib.no:9090/dat109_v20_prosjekt09/stem/" + stand.getNavn());
     }
 
     @GetMapping("/admin/hentqr")
