@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - jury</title>
+    <link th:rel="stylesheet"  th:href="@{/css/navbar-style.css}">
+    <link th:rel="stylesheet"  th:href="@{/css/jurylogin.css}">
+</head>
+<body>
+    <div th:replace="navbar :: navbar"></div>
+    <div class="main-content">
+        <div class="content-center">
+
+            <h4 class="jury-title">Denne siden er kun for jurymedlemmer.</h4>
+            <span class="error-message">
+                <p th:if="${error} == '1'">Pinkoden er feil!</p>
+                <p th:if="${error} == '2'">Du er ikke logget inn!</p>
+            </span>
+            <form method="post" th:action="@{/jury/login}" th:object="${pin}">
+                <div class="pin-field">
+                    <p class="input-name">Skriv pin</p>
+                    <input class="input-pin" th:field="*{kode}" type="password" autocomplete="off"/>
+                </div>
+                <button th:type="submit" class="login-button">Logg inn</button>
+            </form>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" th:src="@{/js/nav.js}">
+    </script>
+</html>

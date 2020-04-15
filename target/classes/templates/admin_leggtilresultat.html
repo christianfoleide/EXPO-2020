@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Resultat</h1>
+
+<p th:text="'navn: ' + ${stand.navn}" />
+<p th:text="'adresse: ' + ${stand.adresse}" />
+<p th:text="'bransje: ' + ${stand.bransje}" />
+<p th:text="'beskrivelse: ' + ${stand.beskrivelse}" /><br>
+
+<a th:href="@{/admin/add}">Legg til ny stand...</a><br>
+<a th:href="@{/admin}">Tilbake til admin-hjem...</a><br>
+<a th:href="@{/}">Hjem</a>
+</body>
+</html>

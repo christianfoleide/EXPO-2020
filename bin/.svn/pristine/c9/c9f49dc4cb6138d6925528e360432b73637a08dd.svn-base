@@ -1,0 +1,85 @@
+package com.expo2020.controllers;
+
+import com.expo2020.models.Stand;
+import com.expo2020.models.Stemme;
+import com.expo2020.services.StandService;
+import com.expo2020.services.StemmeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+import java.util.Optional;
+
+@Controller
+public class StandController {
+
+    @Autowired
+    private StemmeService stemmeService;
+    @Autowired
+    private StandService standService;
+
+    @GetMapping("/resultater")
+    public String resultater(HttpServletRequest req ,Model model) {
+
+        Cookie[] cookies = req.getCookies();
+        for (Cookie cookie: cookies) {
+            if (cookie.getValue().equals("123456789")) {
+                return "juryside.html";
+            }
+        }
+
+        model.addAttribute("feilmelding", "Du må være logget inn for å se denne siden.");
+        return "jurysignin.html";
+    }
+
+    @PostMapping("/jury")
+    public String jury(Model model, HttpServletRequest req, HttpServletResponse res) {
+
+        String pin = req.getParameter("pin");
+
+        if (pin == null || pin.isEmpty()) {
+            model.addAttribute("feilmelding", "Ugyldig pin.");
+            return "jurysignin.html";
+        }
+
+        if (pin.equals("12345")) {
+            Cookie cookie = new Cookie("juryid", "123456789");
+            cookie.setMaxAge(1000);
+            res.addCookie(cookie);
+            return "juryside.html";
+        } else {
+            model.addAttribute("feilmelding", "Ugyldig pin.");
+            return "jurysignin.html";
+        }
+    }
+
+    @GetMapping("/jury")
+    public String jury(Model model) {
+        String jury = "ser greit ut";
+        model.addAttribute("jury", jury);
+        return "jurysignin.html";
+    }
+
+    @GetMapping("/stem/{id}")
+    public String stand(@PathVariable Long id , Model model, HttpServletResponse response) {
+
+        Optional<Stand> stand = standService.findById(id);
+
+        response.addCookie(new Cookie("personid", "stemmeid"));
+
+        if (stand.isPresent()) {
+            Stand s = stand.get();
+
+            System.out.println(stand.toString());
+
+            model.addAttribute("navn", stand.get().getNavn());
+            return "stand.html";
+        }
+        return "";
+    }
+}

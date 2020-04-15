@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta th:accept-charset="UTF-8">
+</head>
+<body>
+<span class="error-message">
+    <p th:text="${feilmelding}"/>
+</span>
+<div class="content">
+
+    <form action="#" th:action="@{/admin/add}" th:object="${stand}" method="post">
+        <p>Navn: <input type="text" th:field="*{navn}"/></p>
+        <p>Adresse: <input type="text" th:field="*{adresse}" /></p>
+        <p>Bransje: <input type="text" th:field="*{bransje}"/></p>
+        <p>Beskrivelse: <input type="text" th:field="*{beskrivelse}"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+.landing-container {
+    background-color: #fefff0;
+    min-height: 90vh;
+    overflow-y: hidden;
+    min-width: 100%;
+}
+
+.landing-center {
+    text-align: center;
+}
+
+.center-text {
+    position: relative;
+    text-align: start;
+    margin: 20px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.subtitle {
+    margin: 20px;
+    opacity: 0.7;
+}
+
+.info-list p {
+    margin: 10px;
+}

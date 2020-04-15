@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible">
+    <link th:rel="stylesheet"  th:href="@{/css/navbar-style.css}">
+    <link th:rel="stylesheet" th:href="@{/css/landing.css}">
+    <link th:rel="stylesheet" th:href="@{/css/stand.css}">
+    <title th:text="${stand.navn}"></title>
+</head>
+<body>
+<div th:replace="navbar :: navbar"></div>
+<div class="container">
+<div class="main-content">
+<div class="landing-container">
+    <div class="stand-center">
+        <p class="nowrap" th:text="${stand.navn}">
+        </p>
+        <p class="nowrap" th:text="${stand.adresse}">
+        </p>
+        <p class="nowrap" th:text="${stand.bransje}">
+        </p>
+        <p class="nowrap" th:text="${stand.beskrivelse}">
+        </p>
+        <p>
+            <img th:src="@{'/stands/hentqr/' + ${stand.id}}"/>
+            <br>
+            <a th:href="@{'/stem/' + ${stand.id}}">Stem her</a>
+        </p>
+    </div>
+    </div>
+</div>
+</div>
+</body>
+<script th:src="@{/js/nav.js}"></script>
+</html>

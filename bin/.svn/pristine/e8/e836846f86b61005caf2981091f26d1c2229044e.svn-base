@@ -1,0 +1,89 @@
+package com.expo2020.models;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+/***
+ * @author christian foleide
+ *  Klasse som definerer en stemme.
+ */
+
+@Entity
+@Table(name = "stemme", schema = "expo")
+public class Stemme implements Serializable {
+
+    private static final long serialVersionUID = -2343243243242432341L;
+
+    /***
+     * @personid id tilhørende en stemme
+     */
+
+    @Id
+    @Column(name = "personid")
+    private Long personid;
+
+    /***
+     * @standid hvilken stand denne stemmen tilhører
+     */
+    @Column(name = "standid")
+    private int standid;
+
+    /***
+     * @stemmeverdi hvor mye denne stemmen er vektet
+     */
+    @Column(name = "stemmeverdi")
+    private int stemmeverdi;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(
+                    name = "standid",
+                    nullable = false,
+                    insertable = false,
+                    updatable = false)
+    private Stand stand;
+
+    public Stemme() {}
+
+    public Stemme( Long personid, int standid, int stemmeverdi) {
+        this.personid = personid;
+        this.standid = standid;
+        this.stemmeverdi = stemmeverdi;
+    }
+
+    @Override
+    public String toString() {
+        return "Stemme{" +
+                "personid=" + personid +
+                ", standid=" + standid +
+                ", stemmeverdi=" + stemmeverdi +
+                '}';
+    }
+
+    public void setPersonid(Long personid) {
+        this.personid = personid;
+    }
+
+    public void setStandid(int standid) {
+        this.standid = standid;
+    }
+
+    public void setStemmeverdi(int stemmeverdi) {
+        this.stemmeverdi = stemmeverdi;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Long getPersonid() {
+        return personid;
+    }
+
+    public int getStandid() {
+        return standid;
+    }
+
+    public int getStemmeverdi() {
+        return stemmeverdi;
+    }
+}

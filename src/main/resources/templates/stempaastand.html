@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible">
+    <title>Gi stemme</title>
+    <link th:rel="stylesheet"  th:href="@{/css/navbar-style.css}">
+    <link th:rel="stylesheet"  th:href="@{/css/stand.css}">
+</head>
+<body>
+<div th:replace="navbar :: navbar"></div>
+    <div class="stand-container">
+        <div class="main-content">
+
+        <div class="stand-center">
+
+            <h2 class="project-group-title" th:text="'Du har valgt å stemme på ' + ${stand.navn}"/>
+            <div class="voting-information-text">
+                <p>Husk at du når som helst kan stemme igjen.</p>
+                <p>Dette betyr at det kun er din siste stemme som telles når arrangementet avsluttes.</p>
+            </div>
+            <div class="error-message" id="error-message">
+                <span>Bruk stjernene under for å si noe om hvor godt du likte dette prosjektet.</span>
+            </div>
+            <form th:action="@{'/stemmebekreftelse/' + ${stand.id}}" th:object="${stemme}" method="post">
+                <ul class="rate-area">
+                    <input type="radio" id="5-star" th:field="*{stemmeverdi}" name="rating" value="5" /><label for="5-star" title="Amazing">5 stars</label>
+                    <input type="radio" id="4-star" th:field="*{stemmeverdi}" name="rating" value="4" /><label for="4-star" title="Good">4 stars</label>
+                    <input type="radio" id="3-star" th:field="*{stemmeverdi}" name="rating" value="3" /><label for="3-star" title="Average">3 stars</label>
+                    <input type="radio" id="2-star" th:field="*{stemmeverdi}" name="rating" value="2" /><label for="2-star" title="Not Good">2 stars</label>
+                    <input type="radio" id="1-star" th:field="*{stemmeverdi}" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+                </ul>
+                <br> <br>
+                <br> <br>
+                <br> <br>
+                <label> Har du en kommentar til denne standen?
+                    <input type="text" th:field="*{kommentar}">
+                </label>
+                <div class="submit-button">
+                    <button id="submit-button" type="submit">Avgi stemme</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" th:src="@{/js/radio.js}"></script>
+<script type="text/javascript" th:src="@{/js/nav.js}"></script>
+</html>

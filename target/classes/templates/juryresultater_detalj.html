@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${stand.id}"></title>
+    <link th:rel="stylesheet"  th:href="@{/css/navbar-style.css}">
+    <link th:rel="stylesheet" th:href="@{/css/landing.css}">
+</head>
+
+<!-- TODO: Gjør dette pent å se på... -->
+
+<body>
+<div th:replace="navbar :: navbar"></div>
+<div class="container">
+    <div class="main-content">
+    <div class="landing-container">
+        <th:block>
+            <h1 th:text="${stand.navn}"></h1>
+            <tr th:if="${stemmer.isEmpty()}">
+            <p>Ingen stemmer tilgjengelig for denne standen...</p>
+            </tr>
+            <table>
+                <tr th:each="stemme : ${stemmer}">
+                   <td th:text="'Score: ' + ${stemme.stemmeverdi}"></td>
+                    <td th:text="', ' + (${stemme.kommentar != null} ? ${stemme.kommentar}
+                        : (${stemme.kommentar == null} ? 'ingen kommentar...'))"></td>
+                </tr>
+            </table>
+        </th:block>
+    </div>
+    </div>
+</div>
+</body>
+<script th:src="@{/js/nav.js}"></script>
+</html>

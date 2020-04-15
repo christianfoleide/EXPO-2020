@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:rel="stylesheet"  th:href="@{/css/navbar-style.css}">
+    <link th:rel="stylesheet" th:href="@{/css/landing.css}">
+</head>
+<body>
+<div th:replace="navbar :: navbar"></div>
+<div class="container">
+    <div class="landing-container">
+        <a class="stand-item" th:href="@{admin/add}">Legg til ny stand...</a>
+        <br>
+        <br>
+            <form  action="#" th:action="@{admin/hentqr}" th:object="${stand}" method="post">
+            <span>Skriv inn URL her: <input type="text" th:field="*{navn}"></span>
+            <input class="stand-item" type="submit" name="submit" value="Hent QR-koden!"/>
+</form>
+    </div>
+</div>
+</body>
+</html>

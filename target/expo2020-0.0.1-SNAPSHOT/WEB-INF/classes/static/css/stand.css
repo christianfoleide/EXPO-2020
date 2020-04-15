@@ -1,0 +1,94 @@
+.stand-container {
+    min-height: 90vh;
+    overflow-y: hidden;
+}
+
+.stand-center {
+
+}
+
+.stand-center p {
+    font-weight: bold;
+    position: relative;
+    display: block;
+}
+
+.voting-information-text {
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+.error-message span {
+    font-weight: bold;
+    font-size: 16px;
+    color: lightcoral;
+}
+
+.error-message {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submit-button button {
+    margin: 30px;
+    cursor: pointer;
+    background-color: #4682B4;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #C6C8CA;
+    padding: 10px 10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    letter-spacing: .15rem;
+
+}
+
+.rate-area {
+    margin-top: 10px;
+    border-style: none;
+    float: left;
+    font-size: 12px;
+}
+
+.rate-area:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0,0,0,0);
+}
+
+.rate-area:not(:checked) > label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 400%;
+    line-height: 1.2;
+    color: lightgrey;
+    text-shadow: 1px 1px #bbb;
+}
+
+.rate-area:not(:checked) > label:before { content: '★ '; }
+
+
+.rate-area > input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px #c60;
+}
+
+.rate-area:not(:checked) > label:hover, .rate-area:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+
+.rate-area > input:checked + label:hover, .rate-area > input:checked + label:hover ~ label, .rate-area > input:checked ~ label:hover, .rate-area > input:checked ~ label:hover ~ label, .rate-area > label:hover ~ input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+}
+
+.rate-area > label:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}

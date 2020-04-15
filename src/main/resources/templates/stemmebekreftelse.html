@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible">
+    <link th:rel="stylesheet"  th:href="@{/css/navbar-style.css}">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="navbar :: navbar"></div>
+<div class="container">
+    <div class="main-content">
+
+        <h2>Din stemme er registrert!</h2>
+        <p th:text="'Takk for at du ' + ${metode} + ${stand.navn}"></p><br>
+        <a th:href="@{/}">Hjem</a>
+
+    </div>
+</div>
+</body>
+<script th:src="@{/js/nav.js}"></script>
+</html>

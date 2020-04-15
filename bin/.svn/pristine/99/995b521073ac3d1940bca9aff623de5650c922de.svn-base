@@ -1,0 +1,15 @@
+package com.expo2020.services;
+
+import org.springframework.stereotype.Service;
+
+/***
+ * @author christian foleide
+ *  Klasse og service som utfører CRUD-operasjoner på databasen.
+ */
+
+@Service
+public class StandService {
+
+
+
+}

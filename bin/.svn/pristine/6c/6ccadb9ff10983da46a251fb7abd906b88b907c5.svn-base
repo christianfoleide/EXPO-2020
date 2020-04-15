@@ -1,0 +1,34 @@
+package com.expo2020.controllers;
+
+import com.expo2020.models.Stand;
+import com.expo2020.repositories.StandRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
+
+@Controller
+public class StandController {
+
+    private final StandRepository repo;
+
+    @Autowired
+    public StandController(StandRepository repo) {
+        this.repo = repo;
+    }
+
+    @GetMapping("/hallo")
+    public String hallo(Model model) {
+
+        List<Stand> stands = repo.findAll();
+        System.out.println(stands.toString());
+        model.addAttribute("stands", stands);
+        return "hallo.html";
+    }
+
+
+
+}

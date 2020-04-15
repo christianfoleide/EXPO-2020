@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="navbar-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="content">
+    <nav>
+        <div class="logo">
+            <ul>
+                <a href="index.html">
+                    <div>expo-2020</div>
+                </a>
+            </ul>
+        </div>
+        <ul class="nav-links">
+            <li><a href="stand.html">Stands</a> </li>
+            <li><a href="jury.html">Jury</a> </li>
+            <li><a href="hallo.html">Hallo</a> </li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</div>
+<footer class="footer">
+    <p>Tester ut footers...</p>
+</footer>
+    <script src="nav.js"></script>
+</body>
+</html>
