@@ -9,18 +9,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f97b7c-793b-4eb8-bd9a-adae0e1d357c" name="Default Changelist" comment="added static folder to version control...">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/stands_detaljert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/stands_detaljert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/expo2020/Expo2020ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/expo2020/Expo2020ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/expo2020/controllers/JuryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/expo2020/controllers/JuryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/stands_detaljert.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/stands_detaljert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/expo2020/Expo2020ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/expo2020/Expo2020ApplicationTests.class" afterDir="false" />
-    </list>
+    <list default="true" id="e9f97b7c-793b-4eb8-bd9a-adae0e1d357c" name="Default Changelist" comment="added static folder to version control..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +47,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -117,7 +109,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20512821" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -263,12 +255,12 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Expo2020ApplicationTests.testVelkommen" />
-      <item itemvalue="Maven.expo2020 [dependency:analyze]" />
-      <item itemvalue="Spring Boot.Expo2020Application" />
-      <item itemvalue="Spring Boot.Expo2020_Application" />
       <item itemvalue="JUnit.Expo2020ApplicationTests" />
       <item itemvalue="JUnit.Expo2020ApplicationTests.standContextGetLoads" />
       <item itemvalue="JUnit.Expo2020ApplicationTests.adminContextGetLoads" />
+      <item itemvalue="Maven.expo2020 [dependency:analyze]" />
+      <item itemvalue="Spring Boot.Expo2020Application" />
+      <item itemvalue="Spring Boot.Expo2020_Application" />
     </list>
     <recent_temporary>
       <list>
@@ -284,32 +276,6 @@
     <configuration>$USER_HOME$/.subversion</configuration>
     <supportedVersion>125</supportedVersion>
     <option name="UPDATE_DEPTH" value="infinity" />
-  </component>
-  <component name="SvnFileUrlMappingImpl">
-    <option name="myMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/bin" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
-    <option name="myMoreRealMappingRoots">
-      <list>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$" />
-        </SvnCopyRootSimple>
-        <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="$PROJECT_DIR$" />
-          <option name="myCopyRoot" value="$PROJECT_DIR$/bin" />
-        </SvnCopyRootSimple>
-      </list>
-    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -340,6 +306,7 @@
       <workItem from="1586863613363" duration="374000" />
       <workItem from="1586872356412" duration="353000" />
       <workItem from="1586873306715" duration="2866000" />
+      <workItem from="1587030881306" duration="661000" />
     </task>
     <task id="LOCAL−00001" summary="added static folder to version control...">
       <created>1583869713036</created>
@@ -385,10 +352,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="240" y="65" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1584725131525" />
-    <state x="240" y="65" width="964" height="669" key="#Project_Structure" timestamp="1586515689352">
+    <state x="240" y="65" width="964" height="669" key="#Project_Structure" timestamp="1587031139796">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="65" width="964" height="669" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1586515689352" />
+    <state x="240" y="65" width="964" height="669" key="#Project_Structure/0.0.1280.800@0.0.1280.800" timestamp="1587031139796" />
     <state x="360" y="88" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1583833975713" />
     <state x="240" y="86" key="#Project_Structure/0.23.1280.777@0.23.1280.777" timestamp="1586093400485" />
     <state x="209" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586110327447">
