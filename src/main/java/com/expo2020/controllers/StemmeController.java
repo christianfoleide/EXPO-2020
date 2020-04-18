@@ -6,6 +6,7 @@ import com.expo2020.services.StandService;
 import com.expo2020.services.StemmeService;
 import com.expo2020.util.CookieUtil;
 import com.expo2020.util.StemmeUtil;
+import org.owasp.encoder.Encode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -54,7 +55,7 @@ public class StemmeController {
                                      @ModelAttribute Stemme stemme) {
         String personid = null;
         int stemmeVerdi = stemme.getStemmeverdi();
-        String kommentar = stemme.getKommentar();
+        String kommentar = Encode.forJava(stemme.getKommentar());
 
         Optional<Stand> stannd = standService.findById(id);
         if (cookie != null) {

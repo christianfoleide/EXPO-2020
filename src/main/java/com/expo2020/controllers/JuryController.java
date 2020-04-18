@@ -11,6 +11,7 @@ import com.expo2020.services.StemmeService;
 import com.expo2020.util.CookieUtil;
 import com.expo2020.util.JuryUtils;
 import com.expo2020.util.ScoreMapUtils;
+import org.owasp.encoder.Encode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -60,10 +61,11 @@ public class JuryController {
                       RedirectAttributes redirectAttributes, HttpServletResponse response) {
         RedirectView redirectView;
         error = "";
-
-        Long inntastetPin = pin.getKode();
-        if (inntastetPin == null) {
-            inntastetPin = 0L; //Crud tillater ikke nullverdi på id, jukser litt her.
+        Long inntastetPin;
+        if (pin.getKode() == null) {
+            inntastetPin = 0L;
+        } else {
+            inntastetPin = Long.valueOf(Encode.forJava(String.valueOf(pin.getKode())));
         }
         if (pinService.correctPin(inntastetPin)) {
             cookie = CookieUtil.cookieBuilder(cookie, "juryid");
